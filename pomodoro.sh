@@ -22,10 +22,19 @@ short_break_cycle=$(( short_break_time * 60 ))
 long_break_cycle=$(( long_break_time * 60 ))
 notify_time=$(( notify_time * 1000 ))
 summary="Pomodoro"
-startmsg="Pomodoro started, you have $pomodoro_time minutes left"
-endmsg_shortbreak="Pomodoro ended, stop the work and take short break"
-endmsg_longbreak="Pomodoro ended, stop the work and take long break"
-killmsg="Pomodoro stopped, restart when you are ready"
+
+# English traduction
+#startmsg="Pomodoro started, you have $pomodoro_time minutes left"
+#endmsg_shortbreak="Pomodoro ended, stop the work and take short break"
+#endmsg_longbreak="Pomodoro ended, stop the work and take long break"
+#killmsg="Pomodoro stopped, restart when you are ready"
+
+# Spanish traduction
+startmsg="Pomodoro iniciado, te quedan $pomodoro_time minutos"
+endmsg_shortbreak="Pomodoro finalizado, deja de trabajar y haz una breve parada"
+endmsg_longbreak="Pomodoro finalizado, deja de trabajar y haz una parada larga"
+killmsg="Pomodoro parado, reinicia el temporizador cuando estés preparado"
+
 
 function xnotify () {
 	notify-send -t $notify_time -i "$DIR/icons/running.png" "$summary" "$1"
